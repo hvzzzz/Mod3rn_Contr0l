@@ -120,12 +120,10 @@ El Péndulo de hélice es un péndulo el cual en la parte inferior de la varilla
 Por la diversidad del sistema se puede aplicar diferentes métodos para el modelamiento, en este proyecto tomaremos en cuenta el modelamiento mediante Euler-Lagrange, lo que permite el aprendizaje y la profundización de esta técnica la cual considera las energías del movimiento sistemático, para la aplicación en sistemas independientes, completos y holonómicos \cite{MitLagrange}.
 \\
 El sistema es del tipo no-lineal por ende se desarrollará una linealización mediante un punto de equilibrio para la aplicación de los métodos accesibles de control. Un punto de equilibrio muy alejado al estado del controlador o si el sistema es extremadamente no-lineal hace que los diferentes métodos de control, no lleven a cabo el mantenimiento del sistema dinámico; por lo que el estudio de este comportamiento no lineal hace un importante significado para su análisis y sobre todo para su controlador. 
-
 \\
 Este tipo de sistema muestra un modelo de planta simple la cual es desarrollada y sirve como ejemplo para los modelos dinámicos dados en diferentes campos de la educación como en ingeniería electrónica, mecánica o mecátronica.
 \newpage
 \section{Modelamiento Matemático}
-\\
 
 \begin{figure}[h]
     \centering
@@ -135,9 +133,7 @@ Este tipo de sistema muestra un modelo de planta simple la cual es desarrollada 
 \end{figure}
 
 El sistema a modelar se muestra en la figura 1 \cite{taskin2017fuzzy}. Utilizando la metodología de Euler-Lagrange para el modelamiento,  se determinará primeramente el lagrangiano ($\mathcal{L}$) del sistema que está en función de la energía cinética ($\mathcal{K}$)   y potencial ($\mathcal{U}$) los cuales se calcularán a continuación.
-\\
-\\
-\\
+
 \textbf{Cálculo de Energía Cinética}
 
 Se procederá a calcular las coordenadas cartesianas del extremo final  (cinemática directa cartesiana), por simple geometría se tendrá que la cinemática directa viene dada por:
@@ -279,7 +275,7 @@ Para propositos de simulación de este modelo dinámico, se usaran los siguiente
     \end{center}
 \end{table}
 
-Reemplanzando los valores numéricos la tabla \ref{tab:parametros} en la ecuación (\ref{eq:din_model}) y despejando la variable "$\ddot{\theta}&$ " se podrán hacer las siguientes simplificaciones.
+Reemplanzando los valores numéricos la tabla \ref{tab:parametros} en la ecuación (\ref{eq:din_model}) y despejando la variable "$\ddot{\theta}$ " se podrán hacer las siguientes simplificaciones.
 
 \begin{equation}
     \begin{split}
@@ -324,8 +320,7 @@ En la ecuación (\ref{eq:state_space}) si hacemos que el valor del vector que co
 \end{equation}
 
 Este ultimo valor se usará como régimen de operación deseado al momento de linealizar el sistema ecuación  (\ref{eq:state_space}) ya que como se observa este no es lineal.
-\\
-\\
+
 \textbf{Linealización del Sistema}
 
 Se definirán los siguientes vectores para realizar esta linealización.
@@ -409,19 +404,19 @@ Reemplazando el punto calculado en la ecuación (\ref{eq:equilibrium}) se tendr�
     \end{bmatrix}
     \times
     \begin{bmatrix}
-     \theta \\
-      \dot{\theta} \\
-      \end{bmatrix}+\begin{bmatrix}
-     0 \\
-     12.04 \\
-      \end{bmatrix}\tau\\ 
-      y&=\begin{bmatrix}
-     1 & 0 \\
-      \end{bmatrix}
-      \begin{bmatrix}
-     \theta \\
-     \dot{\theta} \\
-      \end{bmatrix}
+    \theta \\
+    \dot{\theta} \\
+    \end{bmatrix}+\begin{bmatrix}
+    0 \\
+    12.04 \\
+    \end{bmatrix}\tau\\ 
+    y&=\begin{bmatrix}
+    1 & 0 \\
+    \end{bmatrix}
+    \begin{bmatrix}
+    \theta \\
+    \dot{\theta} \\
+    \end{bmatrix}
     \end{split}
     \label{eq:lined_model_no_constants}
 \end{equation}
@@ -441,7 +436,7 @@ Con la ecuación (\ref{eq:lin_ode}) se harán aproximaciones mediante derivadas 
 
 \begin{equation}
     \begin{split}
-        \theta(t)\backsimeq \thet(t_{k})\\
+        \theta(t)\backsimeq \theta(t_{k})\\
         \dot{\theta}(t)\backsimeq \dot{\theta}(t_{k})&=\frac{\theta(t_{k})-\theta(t_{k-1})}{h}\\
         \ddot{\theta}(t)\backsimeq\ddot{\theta}(t_{k})&=\frac{\dot{\theta}(t_{k})-\dot{\theta}(t_{k-1})}{h}=\frac{\frac{\theta(t_{k})-\theta(t_{k-1})}{h}-\frac{\theta(t_{k-1})-\theta(t_{k-2})}{h}}{h}\\
         \ddot{\theta}(t_{k})&=\frac{\theta(t_{k})-2\theta(t_{k-1})+\theta(t_{k-2})}{h^2}\\

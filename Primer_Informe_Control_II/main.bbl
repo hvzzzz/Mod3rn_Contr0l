@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}
+
+\bibitem{MitLagrange}
+{Kim Vandiver, MIT OpenCourseWare}, ``Introduction to lagrange.''
+  \url{https://www.youtube.com/watch?v=zhk9xLjrmi4&t=893s}, Setiembre 2013.
+\newblock Online; MIT 2.003SC Engineering Dynamics, Fall 2011.
+
+\bibitem{taskin2017fuzzy}
+Y.~Taskin, ``Fuzzy pid controller for propeller pendulum,'' {\em Istanbul
+  University-Journal of Electrical \& Electronics Engineering}, vol.~17, no.~1,
+  pp.~3201--3207, 2017.
+
+\bibitem{reyes:2020}
+F.~R. Cortez, ``Parte vii: Diferenciación numérica, preliminares
+  matemáticos,'' in {\em Control de Robots Manipuladores}, 2020.
+\newblock {Benemerita Universidad Autónoma de Puebla}.
+
+\bibitem{katsuhiko2010modern}
+O.~Katsuhiko, {\em Modern control engineering}.
+\newblock Pearson, 2010.
+
+\end{thebibliography}
